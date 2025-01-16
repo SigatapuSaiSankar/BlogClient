@@ -14,7 +14,7 @@ export default function Home() {
     }, [])
 
     const allBlogs = async () => {
-        let rawData = await fetch("http://localhost:8000/api/v1/blog/allblogs")
+        let rawData = await fetch(`${BASE_URL}/api/v1/blog/allblogs`)
         let jsonBlogs = await rawData.json();
         setBlogs(jsonBlogs.data);
     };
